@@ -20,7 +20,8 @@ stage('Build') {
 
 stage('run') {
    steps {
-    sh 'python3 main.py'    
+    
+    sh "JENKINS_NODE_COOKIE=dontKillMe nohup  python3 main.py &"    
 
     }  
 }
