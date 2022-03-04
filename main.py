@@ -7,16 +7,16 @@ from flask import Flask, render_template
 url = "http://www.ynet.co.il/Integration/StoryRss1854.xml"
 
 resp = requests.get(url)
-
-soup = BeautifulSoup(resp.content, features="xml")
+soup = BeautifulSoup(resp.content, features="lxml")
 items = soup.findAll('item')
 news_items = []
 for item in items:
     news_item = {}
 
     news_item['title'] = item.title.text
-    news_item['link'] = item.link.text
-    news_item['pubDate'] = item.pubDate.text
+
+    news_item['pubDate'] = item.link.text
+    #news_item['pubDate'] = item.pubDate.text
 
     news_items.append(news_item)
     print(news_item)
