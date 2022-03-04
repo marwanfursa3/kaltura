@@ -10,14 +10,14 @@ stage('Clone') {
        
     }  
 }
-//stage('Build') {
-  // steps {
-    //sh """
+stage('Build') {
+   steps {
+    sh """
    	
-    //pip install -r requirements.txt
-    //"""
-    //}  
-//}
+    pip install -r requirements.txt
+    """
+    }  
+}
 
 stage('run') {
    steps {
