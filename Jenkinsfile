@@ -13,18 +13,17 @@ stage('Clone') {
 stage('Build') {
    steps {
     
- //   sh './mvnw package'
      sh	 'pip3 install -r requirments.txt'
    
     }  
 }
 
-//stage('run') {
-  // steps {
-    //sh 'python3 main.py'    
+stage('run') {
+   steps {
+    sh 'python3 main.py'    
 
-    //}  
-//}
+    }  
+}
 stage('slack') {
    steps {
  
