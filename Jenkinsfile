@@ -14,7 +14,7 @@ stage('Build') {
    steps {
     
  //   sh './mvnw package'
-     sh	 'pip3 install -r requirements.txt'
+     sh	 'pip3 install -r requirments.txt'
    
     }  
 }
