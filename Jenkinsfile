@@ -6,8 +6,7 @@ stages{
 
 stage('Clone') {
  steps {
-        
-        git 'https://github.com/marwanfursa3/kaltura.git'
+          git branch: 'main', url:'https://github.com/marwanfursa3/kaltura.git'
        
     }  
 }
