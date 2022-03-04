@@ -28,7 +28,7 @@ stage('run') {
 stage('run') {
    steps {
  
- sh slackSend channel: 'jenkins', message: 'Hey From Slack -- IT WORKS '
+    sh slackSend channel: "jenkins", message: "Hey From Slack -- IT WORKS "
    }
 }
 }
