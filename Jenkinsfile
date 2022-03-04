@@ -22,10 +22,7 @@ stage('Build') {
 
 stage('run') {
    steps {
-    sh 'python3 main.py'
-    
-    sh slackSend channel: 'jenkins', message: 'Hey From Slack -- IT WORKS '
-    
+    sh 'python3 main.py'    
 
     }  
 }
