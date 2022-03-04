@@ -12,7 +12,9 @@ stage('Clone') {
 }
 stage('Build') {
    steps {
-    sh	 'pip3 install -r requirements.txt'
+    
+    sh './mvnw package'
+  //  sh	 'pip3 install -r requirements.txt'
    
     }  
 }
