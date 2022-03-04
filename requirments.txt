@@ -2,5 +2,5 @@ requests
 BeautifulSoup4
 pandas
 flask
-
+lxml
 
