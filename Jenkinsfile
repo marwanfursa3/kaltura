@@ -19,12 +19,12 @@ stage('Build') {
     }  
 }
 
-stage('run') {
-   steps {
-    sh 'python3 main.py'    
+//stage('run') {
+  // steps {
+    //sh 'python3 main.py'    
 
-    }  
-}
+    //}  
+//}
 stage('slack') {
    steps {
  
