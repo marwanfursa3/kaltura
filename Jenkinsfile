@@ -22,7 +22,7 @@ stage('run') {
    steps {
   //  sh "JENKINS_NODE_COOKIE=do_not_kill nohup python3 main.py &"    
 
-    sh " python3 main.py "    
+    sh "python3 main.py "    
 
     }  
 }
