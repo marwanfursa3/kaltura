@@ -1,0 +1,35 @@
+pipeline {
+
+agent any
+
+stages{
+
+stage('Clone') {
+ steps {
+        
+        git 'https://github.com/marwanfursa3/kaltura.git'
+       
+    }  
+}
+stage('Build') {
+   steps {
+    sh """
+   	
+    pip3 install -r requirements.txt
+    """
+    }  
+}
+
+stage('run') {
+   steps {
+    sh 'python3 main.py'
+    
+    sh slackSend channel: 'jenkins', message: 'Hey From Slack -- IT WORKS '
+    
+
+    }  
+}
+
+}
+
+}
