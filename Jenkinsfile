@@ -11,21 +11,21 @@ stage('Clone') {
        
     }  
 }
-stage('Build') {
-   steps {
-    sh """
+//stage('Build') {
+  // steps {
+    //sh """
    	
-    pip3 install -r requirements.txt
-    """
-    }  
-}
+   // pip3 install -r requirements.txt
+   // """
+    //}  
+//}
 
-stage('run') {
-   steps {
-    sh 'python3 main.py'    
-
-    }  
-}
+//stage('run') {
+  // steps {
+ //   sh 'python3 main.py'    
+//
+  //  }  
+//}
 
 }
 
