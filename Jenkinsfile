@@ -4,35 +4,44 @@ agent any
 
 stages{
 
-stage('Clone') {
- steps {
+        stage('Clone') {
+          steps {
           git branch: 'main', url:'https://github.com/marwanfursa3/kaltura.git'
        
-    } 
-  post {
+          } 
+        }
+	stage('pull') {                      
+	 steps {
+		 sh 'docker pull marwan1408/news'
+		}
+        }
+	
+	stage('run') {
+                    
+	   steps {
+				
+		sh 'docker run -it -d -p 5500:5500 marwan1408/news'
+	   }
+	   post {
                 //in case of success : send a success message to my channel in slack
                 success {
-			slackSend channel: 'builds', message: 'Hey From Slack -- IT WORKS '}
+			slackSend channel: 'builds', message: 'success message -- IT WORKS '
+		}
                 //in case of failure : send a failure message to my channel in slack
                 failure {
-                        slackSend channel: '#fursa', color: '#FF0000', message: 'Failed build', tokenCredentialId: 'slacks'}
-  }
+			slackSend channel: 'builds', message: 'failure '
+		}
+	   } 
+        }
+	
 }
-// stage('pull') {
-                      
-//			steps {
-				
-//				sh 'docker pull marwan1408/news'
-//			}
-//	}
- // stage('run') {
-   //                   
-	//		steps {
-				
-	//			sh 'docker run -it -d -p 5500:5500 marwan1408/news'
-	//		}
-	//}
-//stage('Build') {
+}
+
+
+
+
+
+	//stage('Build') {
   // steps {
     
     // sh	 'pip3 install -r requirments.txt'
@@ -48,7 +57,4 @@ stage('Clone') {
 
    // }  
 //}
-
-}
-}
 
