@@ -10,20 +10,20 @@ stage('Clone') {
        
     }  
 }
- stage('pull') {
+// stage('pull') {
                       
-			steps {
+//			steps {
+//				
+//				sh 'docker build -t marwan1408/news .'
+//			}
+//	}
+ // stage('run') {
+   //                   
+	//		steps {
 				
-				sh 'docker build -t marwan1408/news .'
-			}
-	}
-  stage('run') {
-                      
-			steps {
-				
-				sh 'docker run -it -d -p 5500:5500 marwan1408/news'
-			}
-	}
+	//			sh 'docker run -it -d -p 5500:5500 marwan1408/news'
+	//		}
+	//}
 //stage('Build') {
   // steps {
     
