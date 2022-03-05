@@ -43,7 +43,7 @@ stage('Clone') {
 stage('slack') {
    steps {
  
-    slackSend color: "good", message: "Message from Jenkins Pipeline"
+    slackSend color: 'good', message: 'Message from Jenkins Pipeline'
    }
 }
 stage('slacks') {
