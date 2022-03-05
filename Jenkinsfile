@@ -10,13 +10,13 @@ stage('Clone') {
        
     }  
 }
-// stage('pull') {
+ stage('pull') {
                       
-//			steps {
-//				
-//				sh 'docker build -t marwan1408/news .'
-//			}
-//	}
+			steps {
+				
+				sh 'docker pull -t marwan1408/news .'
+			}
+	}
  // stage('run') {
    //                   
 	//		steps {
