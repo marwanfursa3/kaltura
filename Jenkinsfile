@@ -46,6 +46,11 @@ stage('slack') {
      slackSend(channel: "news-update", message: "Success")  
    }
 }
+stage('slacks') {
+   steps {
+ 
+sh' echo heloo > hello.txt'    }
+}
 }
 }
 
