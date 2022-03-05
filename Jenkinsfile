@@ -14,7 +14,7 @@ stage('Clone') {
                       
 			steps {
 				
-				sh 'docker push marwan1408/news:tagname'
+				sh 'docker pull marwan1408/news'
 			}
 	}
  // stage('run') {
