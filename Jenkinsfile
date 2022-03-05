@@ -10,22 +10,36 @@ stage('Clone') {
        
     }  
 }
-stage('Build') {
-   steps {
+ stage('pull') {
+                      
+			steps {
+				
+				sh 'docker build -t marwan1408/news .'
+			}
+	}
+  stage('run') {
+                      
+			steps {
+				
+				sh 'docker run -it -d -p 5500:5500 marwan1408/news'
+			}
+	}
+//stage('Build') {
+  // steps {
     
-     sh	 'pip3 install -r requirments.txt'
+    // sh	 'pip3 install -r requirments.txt'
    
-    }  
-}
+    //}  
+//}
 
-stage('run') {
-   steps {
+//stage('run') {
+  // steps {
   //  sh "JENKINS_NODE_COOKIE=do_not_kill nohup python3 main.py &"    
 
-    sh "python3 main.py "    
+    //sh "python3 main.py "    
 
-    }  
-}
+   // }  
+//}
 stage('slack') {
    steps {
  
