@@ -43,7 +43,7 @@ stage('Clone') {
 stage('slack') {
    steps {
  
-     slackSend(channel: "news-update", message: "https://www.nytimes.com")  
+     slackSend(channel: "news-update", message: "Success")  
    }
 }
 }
