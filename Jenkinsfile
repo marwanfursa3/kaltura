@@ -8,7 +8,15 @@ stage('Clone') {
  steps {
           git branch: 'main', url:'https://github.com/marwanfursa3/kaltura.git'
        
-    }  
+    } 
+  post {
+                //in case of success : send a success message to my channel in slack
+                success {
+                        slackSend channel: '#fursa', color: '#008000', message: 'Successfully built', tokenCredentialId: 'slacks'}
+                //in case of failure : send a failure message to my channel in slack
+                failure {
+                        slackSend channel: '#fursa', color: '#FF0000', message: 'Failed build', tokenCredentialId: 'slacks'}
+  }
 }
 // stage('pull') {
                       
@@ -40,17 +48,7 @@ stage('Clone') {
 
    // }  
 //}
-stage('slack') {
-   steps {
- 
-    slackSend color: 'good', message: 'Message from Jenkins Pipeline'
-   }
-}
-stage('slacks') {
-   steps {
- 
-sh' echo heloo > hello.txt'    }
-}
+
 }
 }
 
