@@ -1,4 +1,3 @@
-# kaltura
 <h1 align="center">Kaltura Devops home assignment</h1>
 <p align="center">
   <img width="100" alt="picture" src="picture/kaltura.png">
@@ -91,7 +90,7 @@ docker run -it -d -p 5500:5500 marwan1408/news
 ```
 
 now you can access the app using : http://localhost:5500/  .
-
+<br>
 	  <img width="600" alt="picture" src="picture/table.png">
 
 ## Jenkins CI/CD pipeline Job:
@@ -104,4 +103,3 @@ you should see in the stage view that the pipeline passed the stages :
 > This pipeline sends a slack notification,if you're intrested in sending one into your own slack channel, you have to setup the slack plugin pefore you run the jenkins file,
 use this link for more detailes :https://kunzleigh.com/creating-a-slack-notifier-using-jenkins-pipeline/
 	  <img width="600" alt="picture" src="picture/slack2.png">
-
