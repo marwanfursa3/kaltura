@@ -24,7 +24,7 @@ The following items should be installed and ready in your system:
 
 * git command line tool , I prefer to work with git Bash. <a href="https://git-scm.com/downloads">download</a>.
 * Your preferred IDE 
-  * IntelliJ IDEA
+  
   * [Pycharm](https://www.jetbrains.com/pycharm/download/#section=windows)
   * [VS Code](https://code.visualstudio.com)
 
