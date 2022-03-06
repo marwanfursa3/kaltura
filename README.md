@@ -58,6 +58,7 @@ The CMD command​ specifies the instruction that is to be executed when a Docke
     docker pull  marwan1408/news  
     docker run -it -d -p 5500:5500 marwan1408/news
     ```
+<br>	
 	  <img width="600" alt="picture" src="picture/code.png">
 
 
