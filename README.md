@@ -49,9 +49,8 @@ The COPY instruction will copy new files from <src> and add them to the containe
 The CMD command​ specifies the instruction that is to be executed when a Docker container starts
 
 ### How to use
-1. Install Docker `sudo apt install docker.io -y`
-2. build the image by running Docker build from a command line or terminal that is in the root directory of the application.
-3. After it is built, you can run the image as a container.
+  Install Docker `sudo apt install docker.io -y`
+  After that, you can run the image as a container.
 
 
     Commands:
